@@ -3,9 +3,12 @@
 
 // let inventory = require('./cars')
 
-let carYearList = require("./problem4");
+
 
 const findOldCars = (carYearList) => {
+    if (!carYearList){
+        return 0
+    }
   let oldCars = [];
   for (let index = 0; index < carYearList.length; index++) {
     if (parseInt(carYearList[index]) < 2000) {
@@ -16,7 +19,4 @@ const findOldCars = (carYearList) => {
   return oldCars;
 };
 
-let oldCarslist = findOldCars(carYearList);
-
-console.log(oldCarslist.length);
-console.log(oldCarslist);
+module.exports = findOldCars;

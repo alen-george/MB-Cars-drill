@@ -1,9 +1,10 @@
 // ==== Problem #3 ====
 // The marketing team wants the car models listed alphabetically on the website. Execute a function to Sort all the car model names into alphabetical order and log the results in the console as it was returned.
 
-let inventory = require("./cars");
-
 const sortCarModel = (inventory) => {
+  if (!inventory) {
+    return 0;
+  }
   let carModelName = [];
 
   for (let index = 0; index < inventory.length; index++) {
@@ -22,6 +23,4 @@ const sortCarModel = (inventory) => {
   return carModelName;
 };
 
-let carlist = sortCarModel(inventory);
-
-console.log(carlist);
+module.exports = sortCarModel;
