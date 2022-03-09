@@ -28,4 +28,4 @@ if (carinfo) {
   console.log("No Data Found");
 }
 
-// module.exports = getDataWithId;
+module.exports = getDataWithId;
