@@ -16,4 +16,7 @@ const getCarYear = (inventory) => {
     return carYear
 }
 
-console.log(getCarYear(inventory))
+let carYearList = getCarYear(inventory)
+console.log(carYearList)
+
+module.exports = carYearList;
