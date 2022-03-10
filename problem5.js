@@ -12,15 +12,11 @@ const findOldCars = (carYearList, inventory) => {
   for (let index = 0; index < carYearList.length; index++) {
     if (parseInt(carYearList[index]) < 2000) {
       numOfOldCars++;
+      oldCars.push(inventory[index]);
     }
   }
 
-  for (let index = 0; index < inventory.length; index++) {
-    if (parseInt(inventory[index].car_year) < 2000) {
-      oldCars.push(inventory[index]);
-    }
-   
-  }
+  
   return oldCars;
 };
 
