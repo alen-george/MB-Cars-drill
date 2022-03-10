@@ -3,7 +3,7 @@
 
 const getBMWAndAudi = (inventory) => {
   if (!inventory) {
-    return 0;
+    return [];
   }
   let BMWAndAudiCars = [];
   for (let index = 0; index < inventory.length; index++) {

@@ -7,7 +7,7 @@
 
 const findOldCars = (carYearList) => {
     if (!carYearList){
-        return 0
+        return []
     }
   let oldCars = [];
   for (let index = 0; index < carYearList.length; index++) {

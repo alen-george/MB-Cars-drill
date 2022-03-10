@@ -3,24 +3,20 @@
 
 const sortCarModel = (inventory) => {
   if (!inventory) {
-    return 0;
+    return [];
   }
-  let carModelName = [];
-
-  for (let index = 0; index < inventory.length; index++) {
-    carModelName.push(inventory[index].car_model);
-  }
-
-  carModelName.sort((a, b) => {
-    if (a.toUpperCase() < b.toUpperCase()) {
+  inventory.sort((a, b) => {
+    if (a.car_model.toUpperCase() < b.car_model.toUpperCase()) {
       return -1;
-    } else if (b.toUpperCase() > a.toUpperCase()) {
+    } else if (b.car_model.toUpperCase() > a.car_model.toUpperCase()) {
       return 1;
     } else {
       return 0;
     }
   });
-  return carModelName;
+  return inventory;
 };
+
+// console.log(inventory)
 
 module.exports = sortCarModel;
