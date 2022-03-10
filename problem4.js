@@ -3,7 +3,7 @@
 
 const getCarYear = (inventory) => {
   if (!inventory) {
-    return 0;
+    return [];
   }
 
   let carYear = [];

@@ -4,7 +4,7 @@
 
 const getLastCar = (inventory) => {
   if (!inventory) {
-    return 0;
+    return '';
   }
   return `Last car is a ${inventory[inventory.length - 1].car_make} ${
     inventory[inventory.length - 1].car_model

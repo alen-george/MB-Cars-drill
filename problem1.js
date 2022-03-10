@@ -4,7 +4,7 @@
 
 function getDataWithId(inventory, id) {
   if (!(inventory && id)) {
-    return 0;
+    return '';
   }
   let info;
 

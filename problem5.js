@@ -3,19 +3,24 @@
 
 // let inventory = require('./cars')
 
-
-
-const findOldCars = (carYearList) => {
-    if (!carYearList){
-        return []
-    }
-  let oldCars = [];
+const findOldCars = (carYearList, inventory) => {
+  if (!(carYearList && inventory)) {
+    return [];
+  }
+  let oldCars = [],
+    numOfOldCars = 0;
   for (let index = 0; index < carYearList.length; index++) {
     if (parseInt(carYearList[index]) < 2000) {
-      oldCars.push(carYearList[index]);
+      numOfOldCars++;
     }
   }
 
+  for (let index = 0; index < inventory.length; index++) {
+    if (parseInt(inventory[index].car_year) < 2000) {
+      oldCars.push(inventory[index]);
+    }
+   
+  }
   return oldCars;
 };
 
