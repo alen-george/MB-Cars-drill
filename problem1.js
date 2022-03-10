@@ -10,11 +10,11 @@ function getDataWithId(inventory, id) {
 
   for (let index = 0; index < inventory.length; index++) {
     if (inventory[index].id === id) {
-      info = inventory[index];
+      return info;
     }
   }
 
-  return info;
+  
 }
 
 module.exports = { getDataWithId: getDataWithId };
